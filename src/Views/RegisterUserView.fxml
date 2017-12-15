@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterUserViewController">
+   <children>
+      <VBox layoutX="142.0" layoutY="22.0" prefHeight="400.0" prefWidth="600.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="registerHeadingLabel" prefHeight="29.0" prefWidth="557.0" text="Register a new employee">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="56.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../emp.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <TextField fx:id="userNameTextField" promptText="User name" />
+            <TextField fx:id="contactInfoTextField" promptText="Contact info" />
+            <CheckBox fx:id="isManagerCheckBox" mnemonicParsing="false" text="Manager" />
+            <PasswordField fx:id="passwordField" promptText="Password" />
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirm password" />
+            <ButtonBar>
+              <buttons>
+                  <Button fx:id="registerUserButton" mnemonicParsing="false" onAction="#registerUserButtonClicked" styleClass="success" text="Register" />
+                  <Button minWidth="0.0" mnemonicParsing="false" onAction="#cancelButtonPushed" prefWidth="277.0" styleClass="primary" text="Cancel" />
+              </buttons>
+            </ButtonBar>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

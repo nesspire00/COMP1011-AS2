@@ -23,7 +23,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="errorLabel" text="(Error Message)" textFill="#cd0404">
+            <Label fx:id="errorLabel" styleClass="warning" text="(Error Message)" textFill="#cd0404">
                <font>
                   <Font size="12.0" />
                </font>
@@ -65,7 +65,7 @@
             <TextField fx:id="smartFeaturesField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <Label text="Smart Features:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <ImageView fx:id="imageView" fitHeight="108.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" onAction="#chooseImageButtonPushed" text="Browse..." GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#chooseImageButtonPushed" styleClass="primary" text="Browse..." GridPane.columnIndex="3" GridPane.rowIndex="5" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -73,8 +73,8 @@
       </GridPane>
       <ButtonBar prefHeight="40.0" prefWidth="200.0">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#createButtonPushed" text="Add Product" />
-            <Button mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+            <Button mnemonicParsing="false" onAction="#createButtonPushed" styleClass="success" text="Add Product" />
+            <Button mnemonicParsing="false" onAction="#cancelButtonPushed" styleClass="danger" text="Cancel" />
          </buttons>
       </ButtonBar>
    </children>

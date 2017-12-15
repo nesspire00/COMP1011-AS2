@@ -19,6 +19,7 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Label fx:id="greetingLabel" text="Label" />
       <TableView fx:id="productsTable" prefHeight="267.0" prefWidth="750.0">
         <columns>
           <TableColumn fx:id="brandColumn" prefWidth="87.20055437088013" text="Brand" />
@@ -50,8 +51,12 @@
       </GridPane>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
-            <Button fx:id="addNewProductButton" mnemonicParsing="false" onAction="#addNewProductButtonPushed" text="Add New Item" />
-            <Button fx:id="sellProductButton" mnemonicParsing="false" text="Sell Item" />
+            <Button fx:id="addNewProductButton" mnemonicParsing="false" onAction="#addNewProductButtonPushed" styleClass="success" text="Add New Item" />
+            <Button fx:id="sellProductButton" mnemonicParsing="false" onAction="#sellItemButtonPushed" styleClass="primary" text="Sell Item" />
+            <Button fx:id="reportsButton" mnemonicParsing="false" text="Reports" />
+            <Button fx:id="registerUserButton" mnemonicParsing="false" onAction="#goToRegisterUserScene" styleClass="warning" text="Register a user" />
+            <Button fx:id="employeesButton" mnemonicParsing="false" onAction="#employeesButtonPushed" text="Employees" />
+            <Button mnemonicParsing="false" onAction="#logOutButtonPushed" styleClass="danger" text="Log off" />
          </children>
       </HBox>
    </children>

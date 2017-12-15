@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SaleViewController">
+   <children>
+      <VBox layoutX="232.0" layoutY="24.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="New Sale" />
+            <Label text="Item" />
+            <Label fx:id="itemNameLabel" text="Label" />
+            <Label text="Quantity:" />
+            <Spinner fx:id="quantitySpinner" />
+            <Label text="Sale date" />
+            <DatePicker fx:id="transactionDatePicker" />
+            <Label text="Price" />
+            <TextField fx:id="priceTextField" />
+            <Button fx:id="sellButton" mnemonicParsing="false" onAction="#saleButtonPushed" text="Make a sale" />
+            <Button mnemonicParsing="false" onAction="#backButtonPushed" text="Go Back" />
+            <Label fx:id="messageLabel" text="Label" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

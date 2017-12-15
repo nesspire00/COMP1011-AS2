@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ShowUsersViewController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" text="View Employees">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="greetingLabel" text="Label">
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <ImageView fitHeight="57.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../emp.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="460.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <TableView fx:id="employeeTable" prefHeight="267.0" prefWidth="750.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="376.0" text="Name" />
+            <TableColumn fx:id="contactInfoColumn" minWidth="8.0" prefWidth="373.0" text="Contact Info" />
+        </columns>
+      </TableView>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="numberOfEmployeesLabel" text="Label" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <Button fx:id="registerUserButton" mnemonicParsing="false" onAction="#goToRegisterUserScene" styleClass="success" text="Register a user" />
+            <Button mnemonicParsing="false" onAction="#editUserButtonPushed" styleClass="warning" text="Edit User" />
+            <Button mnemonicParsing="false" onAction="#returnButtonPushed" styleClass="primary" text="Return" />
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</VBox>

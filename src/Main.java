@@ -17,11 +17,14 @@ public class Main extends Application{
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
-            Parent root = FXMLLoader.load(getClass().getResource("Views/ShowProductsView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Views/LoginBoxView.fxml"));
             Scene scene = new Scene(root);
 
             primaryStage.setTitle("Inventory");
             primaryStage.setScene(scene);
+            scene.getStylesheets().add(Main.class.getResource("bootstrap3.css").toExternalForm());
             primaryStage.show();
     }
+
+
 }

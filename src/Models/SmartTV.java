@@ -1,6 +1,16 @@
 package Models;
 
-import javafx.scene.image.Image;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.security.SecureRandom;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class SmartTV extends Television {
     private String operatingSystem, smartFeatures;
@@ -12,13 +22,18 @@ public class SmartTV extends Television {
      * @param modelNo
      * @param resolution
      * @param brand
-     * @param features
      * @param panelType
      * @param operatingSystem
      * @param smartFeatures
      */
-    public SmartTV(double storePrice, double manufacturerPrice, int screenSize, String modelNo, String resolution, String brand, String features, Television.panelType panelType, String operatingSystem, String smartFeatures) {
-        super(storePrice, manufacturerPrice, screenSize, modelNo, resolution, brand, features, panelType);
+    public SmartTV(double storePrice, int screenSize, String modelNo, String resolution, String brand, Television.panelType panelType, String operatingSystem, String smartFeatures) {
+        super(storePrice, screenSize, modelNo, resolution, brand, panelType);
+        this.operatingSystem = operatingSystem;
+        this.smartFeatures = smartFeatures;
+    }
+
+    public SmartTV(double storePrice, int screenSize, String modelNo, String resolution, String brand, Television.panelType panelType, String operatingSystem, String smartFeatures, int tvId) {
+        super(storePrice, screenSize, modelNo, resolution, brand, panelType, tvId);
         this.operatingSystem = operatingSystem;
         this.smartFeatures = smartFeatures;
     }
@@ -30,16 +45,16 @@ public class SmartTV extends Television {
      * @param modelNo
      * @param resolution
      * @param brand
-     * @param features
      * @param panelType
      * @param operatingSystem
      * @param smartFeatures
      * @param image
      */
-    public SmartTV(double storePrice, double manufacturerPrice, int screenSize, String modelNo, String resolution, String brand, String features, Television.panelType panelType, String operatingSystem, String smartFeatures, Image image) {
-        super(storePrice, manufacturerPrice, screenSize, modelNo, resolution, brand, features, panelType, image);
+    public SmartTV(double storePrice, int screenSize, String modelNo, String resolution, String brand, Television.panelType panelType, String operatingSystem, String smartFeatures, File image) throws IOException {
+        super(storePrice, screenSize, modelNo, resolution, brand, panelType, image);
         this.operatingSystem = operatingSystem;
         this.smartFeatures = smartFeatures;
+        copyImageFile();
     }
 
     public String getOperatingSystem() {
@@ -66,4 +81,37 @@ public class SmartTV extends Television {
     public void setSmartFeatures(String smartFeatures) {
         this.smartFeatures = smartFeatures;
     }
-}
+
+    public void insertIntoDb() throws SQLException {
+
+            Connection conn = null;
+            PreparedStatement statement = null;
+
+            try{
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/COMP1011-AS2?useSSL=false", "root", "root");
+
+                statement = conn.prepareStatement("INSERT INTO television (storePrice, screenSize, modelNo, resolution, brand, panelType, operatingSystem, smartFeatures, image) VALUES (?,?,?,?,?,?,?,?,?)");
+                statement.setDouble(1, getStorePrice());
+                statement.setInt(2, getScreenSize());
+                statement.setString(3, getModelNo());
+                statement.setString(4, getResolution());
+                statement.setString(5, getBrand());
+                statement.setString(6, getPanelType().toString());
+                statement.setString(7, operatingSystem);
+                statement.setString(8, smartFeatures);
+                statement.setString(9, getTvImageFile().getName());
+
+                statement.execute();
+            }
+            catch (SQLException e){
+                System.err.println(e);
+            }
+            finally {
+                if (conn != null)
+                    conn.close();
+                if (statement != null)
+                    statement.close();
+            }
+        }
+
+    }

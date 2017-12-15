@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386b4264-7a5b-40e3-873b-58ab9f9f101f" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/COMP1011-AS1.iml" afterPath="$PROJECT_DIR$/COMP1011-AS2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/AddNewProductViewController.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/AddNewProductViewController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/ControllerInterface.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/ControllerInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/SceneChanger.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/SceneChanger.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/ShowProductsViewController.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Controllers/ShowProductsViewController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Main.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Models/SmartTV.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Models/SmartTV.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Models/Television.class" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Models/Television.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/COMP1011-AS1.iml" afterPath="$PROJECT_DIR$/COMP1011-AS1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Views/AddNewProductView.fxml" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Views/AddNewProductView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP1011-AS1/Views/ShowProductsView.fxml" afterPath="$PROJECT_DIR$/out/production/COMP1011-AS1/Views/ShowProductsView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java" afterPath="$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/ControllerInterface.java" afterPath="$PROJECT_DIR$/src/Controllers/ControllerInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/SceneChanger.java" afterPath="$PROJECT_DIR$/src/Controllers/SceneChanger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/ShowProductsViewController.java" afterPath="$PROJECT_DIR$/src/Controllers/ShowProductsViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/SmartTV.java" afterPath="$PROJECT_DIR$/src/Models/SmartTV.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Television.java" afterPath="$PROJECT_DIR$/src/Models/Television.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/AddNewProductView.fxml" afterPath="$PROJECT_DIR$/src/Views/AddNewProductView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/ShowProductsView.fxml" afterPath="$PROJECT_DIR$/src/Views/ShowProductsView.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,58 +34,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddNewProductViewController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddNewProductViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="112" column="43" lean-forward="false" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneChanger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/SceneChanger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Television.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Television.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowProductsViewController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShowProductsViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/ShowProductsViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state relative-caret-position="164">
+              <caret line="126" column="58" lean-forward="false" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1513026003366" expanded="true" signature="5215:5239" ph="SELECT * FRO... television" />
+                <element signature="docComment;method#initialize#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="docComment;method#getStockNumber#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="docComment;method#addNewProductButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="docComment;method#getStockPrice#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="method#getStockPrice#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="docComment;method#getTVs#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="method#logOutButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="method#employeesButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="method#sellItemButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+                <element signature="method#reportButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+                <marker date="1513336710072" expanded="true" signature="4557:4581" ph="SELECT * FRO... television" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmartTV.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/SmartTV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -84,9 +74,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/Models</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,13 +108,24 @@
         <option value="$PROJECT_DIR$/src/com/company/Television.java" />
         <option value="$PROJECT_DIR$/src/com/company/AddNewProductViewController.java" />
         <option value="$PROJECT_DIR$/src/Views/ShowProductsViewController.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/ControllerInterface.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/SceneChanger.java" />
+        <option value="$PROJECT_DIR$/src/Models/PasswordGenerator.java" />
+        <option value="$PROJECT_DIR$/src/Views/LoginBoxView.fxml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Models/SmartTV.java" />
+        <option value="$PROJECT_DIR$/src/Views/SaleView.fxml" />
+        <option value="$PROJECT_DIR$/src/Views/ReportView.fxml" />
+        <option value="$PROJECT_DIR$/src/Models/User.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SceneChanger.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ControllerInterface.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/SaleViewController.java" />
         <option value="$PROJECT_DIR$/src/Controllers/ShowProductsViewController.java" />
+        <option value="$PROJECT_DIR$/src/Views/RegisterUserView.fxml" />
         <option value="$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ShowUsersViewController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/LoginBoxViewController.java" />
         <option value="$PROJECT_DIR$/src/Models/Television.java" />
+        <option value="$PROJECT_DIR$/src/Models/SmartTV.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/ReportViewController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/RegisterUserViewController.java" />
       </list>
     </option>
   </component>
@@ -125,10 +135,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="746" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -146,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scratches" />
@@ -171,13 +182,24 @@
               <item name="COMP1011-AS2" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP1011-AS2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP1011-AS2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP1011-AS2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP1011-AS2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP1011-AS2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,7 +239,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="COMP1011-AS1" />
+      <module name="COMP1011-AS2" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -283,44 +305,50 @@
       <workItem from="1512596145142" duration="554000" />
       <workItem from="1512938707797" duration="1224000" />
       <workItem from="1512944872147" duration="4731000" />
-      <workItem from="1513024772112" duration="3875000" />
+      <workItem from="1513024772112" duration="3980000" />
+      <workItem from="1513040901585" duration="712000" />
+      <workItem from="1513121959094" duration="2072000" />
+      <workItem from="1513215098239" duration="6455000" />
+      <workItem from="1513292918035" duration="24295000" />
+      <workItem from="1513343278552" duration="340000" />
+      <workItem from="1513344261727" duration="3547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53102000" />
+    <option name="totallyTimeSpent" value="90628000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="746" extended-state="1" />
+    <frame x="0" y="22" width="1280" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32666665" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32357472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3264095" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2989214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2253635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2584814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39791358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39599383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +359,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -345,118 +373,7 @@
         <state relative-caret-position="105">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Television.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/SmartTV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="82" column="85" lean-forward="true" selection-start-line="82" selection-start-column="85" selection-end-line="82" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/SmartTV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Television.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/SmartTV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Television.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,7 +382,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
           <caret line="84" column="49" lean-forward="true" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#copyImageFile#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#uniqueFileInDirectory#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#validCharacterValue#0;class#Television#0" expanded="false" />
+            <element signature="method#validCharacterValue#0;class#Television#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -475,7 +410,6 @@
           <caret line="49" column="68" lean-forward="true" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
           </folding>
         </state>
       </provider>
@@ -484,7 +418,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="method#setOperatingSystem#0;class#SmartTV#0" expanded="false" />
+            <marker date="1513346042464" expanded="true" signature="3170:3322" ph="INSERT INTO television... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -493,7 +430,7 @@
         <state relative-caret-position="105">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -502,7 +439,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="method#setOperatingSystem#0;class#SmartTV#0" expanded="false" />
+            <marker date="1513346042464" expanded="true" signature="3170:3322" ph="INSERT INTO television... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -510,7 +450,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
           <caret line="84" column="24" lean-forward="false" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#copyImageFile#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#uniqueFileInDirectory#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#validCharacterValue#0;class#Television#0" expanded="false" />
+            <element signature="method#validCharacterValue#0;class#Television#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -520,7 +478,6 @@
           <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
           </folding>
         </state>
       </provider>
@@ -530,7 +487,7 @@
         <state relative-caret-position="120">
           <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -539,7 +496,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="method#setOperatingSystem#0;class#SmartTV#0" expanded="false" />
+            <marker date="1513346042464" expanded="true" signature="3170:3322" ph="INSERT INTO television... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -554,18 +514,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#copyImageFile#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#uniqueFileInDirectory#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#validCharacterValue#0;class#Television#0" expanded="false" />
+            <element signature="method#validCharacterValue#0;class#Television#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Views/AddNewProductView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/SceneChanger.java">
@@ -588,7 +566,6 @@
           <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
           </folding>
         </state>
       </provider>
@@ -598,7 +575,7 @@
         <state relative-caret-position="105">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,7 +584,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="method#setOperatingSystem#0;class#SmartTV#0" expanded="false" />
+            <marker date="1513346042464" expanded="true" signature="3170:3322" ph="INSERT INTO television... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -638,7 +618,6 @@
           <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
           </folding>
         </state>
       </provider>
@@ -647,7 +626,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#copyImageFile#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#uniqueFileInDirectory#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#validCharacterValue#0;class#Television#0" expanded="false" />
+            <element signature="method#validCharacterValue#0;class#Television#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -656,7 +653,7 @@
         <state relative-caret-position="105">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -665,7 +662,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#copyImageFile#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#uniqueFileInDirectory#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#validCharacterValue#0;class#Television#0" expanded="false" />
+            <element signature="method#validCharacterValue#0;class#Television#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,7 +688,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setOperatingSystem#0;class#SmartTV#0" expanded="false" />
+            <marker date="1513346042464" expanded="true" signature="3170:3322" ph="INSERT INTO television... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -697,7 +715,6 @@
           <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
           </folding>
         </state>
       </provider>
@@ -707,7 +724,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,26 +737,220 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Views/AddNewProductView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/PasswordGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/LoginBoxView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ControllerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="90" lean-forward="false" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/SaleView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/COMP1011-AS2.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="150">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#1118#1119#0" expanded="false" />
+            <element signature="e#1205#1206#0" expanded="false" />
+            <element signature="e#1235#1236#0" expanded="false" />
+            <element signature="e#1264#1265#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/ReportView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SceneChanger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="68" column="49" lean-forward="true" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#411#412#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/RegisterUserView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/RegisterUserViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <marker date="1513347537152" expanded="true" signature="1803:1890" ph="INSERT INTO users... " />
+            <marker date="1513347537152" expanded="true" signature="3043:3128" ph="UPDATE users... " />
+            <marker date="1513347537152" expanded="true" signature="3043:3143" ph="UPDATE users... " />
+            <marker date="1513347537152" expanded="true" signature="3043:3144" ph="UPDATE users... " />
+            <marker date="1513347537152" expanded="true" signature="4059:4136" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Television.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="method#setStorePrice#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="method#setScreenSize#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="method#setModelNo#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="method#setResolution#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="method#setBrand#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#copyImageFile#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="method#getUniqueFileName#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#uniqueFileInDirectory#0;class#Television#0" expanded="false" />
+            <element signature="docComment;method#validCharacterValue#0;class#Television#0" expanded="false" />
+            <element signature="method#validCharacterValue#0;class#Television#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/LoginBoxViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1513337707697" expanded="true" signature="1066:1102" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/SmartTV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="method#setOperatingSystem#0;class#SmartTV#0" expanded="false" />
+            <marker date="1513346042464" expanded="true" signature="3170:3322" ph="INSERT INTO television... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/SaleViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="56" column="75" lean-forward="false" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513333044952" expanded="true" signature="2356:2432" ph="INSERT INTO sales... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ReportViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="44" column="165" lean-forward="false" selection-start-line="44" selection-start-column="165" selection-end-line="44" selection-end-column="165" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513346212576" expanded="true" signature="2342:2626" ph="SELECT MONTH... sales" />
+            <marker date="1513346212576" expanded="true" signature="2932:3219" ph="SELECT itemI... sales" />
+            <marker date="1513346212576" expanded="true" signature="2932:3222" ph="SELECT MONTH... sales" />
+            <marker date="1513346212576" expanded="true" signature="3815:4110" ph="SELECT itemI... sales" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ControllerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ShowUsersViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="30" column="101" lean-forward="false" selection-start-line="30" selection-start-column="101" selection-end-line="30" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513337459557" expanded="true" signature="2049:2107" ph="SELECT userI... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -748,46 +959,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ShowProductsViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state relative-caret-position="164">
+          <caret line="126" column="58" lean-forward="false" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513026003366" expanded="true" signature="5215:5239" ph="SELECT * FRO... television" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/SmartTV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/SceneChanger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Television.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/AddNewProductViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="112" column="43" lean-forward="false" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513031012992" expanded="true" signature="3241:3417" ph="INSERT INTO television... " />
+            <element signature="docComment;method#initialize#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="docComment;method#getStockNumber#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="docComment;method#addNewProductButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="docComment;method#getStockPrice#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="method#getStockPrice#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="docComment;method#getTVs#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="method#logOutButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="method#employeesButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="method#sellItemButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+            <element signature="method#reportButtonPushed#0;class#ShowProductsViewController#0" expanded="false" />
+            <marker date="1513336710072" expanded="true" signature="4557:4581" ph="SELECT * FRO... television" />
           </folding>
         </state>
       </provider>
