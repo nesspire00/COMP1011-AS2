@@ -15,7 +15,7 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class SaleViewController implements Initializable, ControllerInterface{
+public class SaleViewController implements Initializable, ControllerInterface {
 
     @FXML private Label itemNameLabel;
     @FXML private Spinner<Integer> quantitySpinner;
@@ -44,6 +44,11 @@ public class SaleViewController implements Initializable, ControllerInterface{
 
     }
 
+    /**
+     * Load the item name, store price and id from the main scene
+     *
+     * @param tv
+     */
     @Override
     public void preloadData(SmartTV tv) {
         itemNameLabel.setText(tv.getBrand() + " " + tv.getModelNo() + " " + tv.getResolution() + " (ID:" + tv.getTvId() + ")");
@@ -52,19 +57,25 @@ public class SaleViewController implements Initializable, ControllerInterface{
         priceTextField.setPromptText("Original price: " + NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(storePrice)));
     }
 
+    /**
+     * Validate and record the sale in db
+     *
+     * @throws SQLException
+     */
     public void saleButtonPushed() throws SQLException {
-        try{
+        try {
             double salePrice = Double.parseDouble(priceTextField.getText());
-            if(salePrice > 0 && salePrice < 99999.99){
+            if (salePrice > 0 && salePrice < 99999.99) {
                 Connection conn = null;
                 PreparedStatement statement = null;
                 ResultSet resultSet = null;
 
-                try{
-                    conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/COMP1011-AS2?useSSL=false", "root", "root");
+                try {
+                    conn = DriverManager.getConnection("jdbc:mysql://sql.computerstudi.es/gc200348171?useSSL=false", "gc200348171", "YaTa2qzm");
+                    conn = DriverManager.getConnection("jdbc:mysql://sql.computerstudi.es/gc200348171?useSSL=false", "gc200348171", "YaTa2qzm");
 
                     statement = conn.prepareStatement("INSERT INTO sales (itemId, storePrice, salePrice, saleDate) VALUES (?,?,?,?)");
-                    statement.setInt(1,tvId);
+                    statement.setInt(1, tvId);
                     statement.setDouble(2, quantitySpinner.getValue() * storePrice);
                     statement.setDouble(3, quantitySpinner.getValue() * salePrice);
                     statement.setDate(4, Date.valueOf(transactionDatePicker.getValue()));
@@ -72,11 +83,9 @@ public class SaleViewController implements Initializable, ControllerInterface{
                     statement.execute();
 
                     messageLabel.setText("Sale successful, you can now return to the inventory or sell again.");
-                }
-                catch (SQLException e){
+                } catch (SQLException e) {
                     System.err.println(e);
-                }
-                finally {
+                } finally {
                     if (conn != null)
                         conn.close();
                     if (statement != null)
@@ -84,12 +93,11 @@ public class SaleViewController implements Initializable, ControllerInterface{
                     if (resultSet != null)
                         resultSet.close();
                 }
-            }else{
+            } else {
                 messageLabel.setText("Price cannot be negative or 0 and no more than $99999.99");
             }
 
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             messageLabel.setText("Please enter a valid price");
         }
     }

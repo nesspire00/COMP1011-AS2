@@ -25,24 +25,35 @@ public class SceneChanger {
 
     /**
      * Changes scene to the requested FXML file.
+     *
      * @param event
      * @param viewName name of the view
-     * @param title title of the new window
+     * @param title    title of the new window
      * @throws IOException
      */
-    public void changeScene(ActionEvent event, String viewName, String title) throws IOException{
+    public void changeScene(ActionEvent event, String viewName, String title) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(viewName));
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(scene);
         scene.getStylesheets().add(SceneChanger.class.getResource("../bootstrap3.css").toExternalForm());
         stage.show();
     }
 
-    public void changeScene(ActionEvent event, String viewName, String title, User employee, ControllerInterface controllerInterface) throws IOException{
+    /**
+     * Scene Changer that carries employee object through the scene changes
+     *
+     * @param event
+     * @param viewName
+     * @param title
+     * @param employee
+     * @param controllerInterface
+     * @throws IOException
+     */
+    public void changeScene(ActionEvent event, String viewName, String title, User employee, ControllerInterface controllerInterface) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(viewName));
         Parent parent = loader.load();
@@ -52,13 +63,24 @@ public class SceneChanger {
         controllerInterface = loader.getController();
         controllerInterface.preloadData(employee);
 
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(scene);
         scene.getStylesheets().add(SceneChanger.class.getResource("../bootstrap3.css").toExternalForm());
         stage.show();
     }
-    public void changeScene(ActionEvent event, String viewName, String title, SmartTV smartTV, ControllerInterface controllerInterface) throws IOException{
+
+    /**
+     * Scene Changer that transfers a SmartTV object through the scene change
+     *
+     * @param event
+     * @param viewName
+     * @param title
+     * @param smartTV
+     * @param controllerInterface
+     * @throws IOException
+     */
+    public void changeScene(ActionEvent event, String viewName, String title, SmartTV smartTV, ControllerInterface controllerInterface) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(viewName));
         Parent parent = loader.load();
@@ -68,7 +90,7 @@ public class SceneChanger {
         controllerInterface = loader.getController();
         controllerInterface.preloadData(smartTV);
 
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(scene);
         scene.getStylesheets().add(SceneChanger.class.getResource("../bootstrap3.css").toExternalForm());

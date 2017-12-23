@@ -1,5 +1,8 @@
 package Models;
 
+/**
+ * A quick model for a user, that gets created from the data from the DB during login
+ */
 public class User {
 
     private boolean isAdmin;
@@ -19,7 +22,7 @@ public class User {
     }
 
     public void setUserName(String userName) {
-        if(!userName.isEmpty())
+        if (!userName.isEmpty())
             this.userName = userName;
         else
             throw new IllegalArgumentException("User Name cannot be empty");
@@ -30,7 +33,7 @@ public class User {
     }
 
     public void setContactInfo(String contactInfo) {
-        if(!contactInfo.isEmpty())
+        if (!contactInfo.isEmpty())
             this.contactInfo = contactInfo;
         else
             throw new IllegalArgumentException("Contact info cannot be empty");
@@ -45,7 +48,7 @@ public class User {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return isAdmin ? "admin/" + getUserName() : "employee/" + getUserName();
     }
 

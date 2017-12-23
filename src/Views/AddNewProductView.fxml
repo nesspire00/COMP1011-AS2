@@ -73,7 +73,7 @@
       </GridPane>
       <ButtonBar prefHeight="40.0" prefWidth="200.0">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#createButtonPushed" styleClass="success" text="Add Product" />
+            <Button mnemonicParsing="false" onAction="#createButtonPushed" styleClass="success" text="Add Product" prefWidth="100.0"/>
             <Button mnemonicParsing="false" onAction="#cancelButtonPushed" styleClass="danger" text="Cancel" />
          </buttons>
       </ButtonBar>

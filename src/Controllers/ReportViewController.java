@@ -19,7 +19,7 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class ReportViewController implements Initializable{
+public class ReportViewController implements Initializable {
 
     @FXML private LineChart profitLineChart;
     @FXML private NumberAxis profitAxis;
@@ -33,10 +33,10 @@ public class ReportViewController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         profitSeries = new XYChart.Series<>();
 
-        try{
+        try {
             populateFromDb(LocalDate.now().getYear());
 
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println(e);
         }
 
@@ -56,7 +56,7 @@ public class ReportViewController implements Initializable{
         populateFromDb(yearSpinner.getValue());
     }
 
-    public void populateFromDb(int year) throws SQLException{
+    public void populateFromDb(int year) throws SQLException {
         profitSeries.getData().clear();
         profitSeries.setName(Integer.toString(year));
 
@@ -64,32 +64,31 @@ public class ReportViewController implements Initializable{
         PreparedStatement statement = null;
         ResultSet resultSet = null;
 
-        try{
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/COMP1011-AS2?useSSL=false", "root", "root");
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://sql.computerstudi.es/gc200348171?useSSL=false", "gc200348171", "YaTa2qzm");
 
             statement = conn.prepareStatement("SELECT MONTHNAME(saleDate), SUM(salePrice - storePrice) " +
-                                                   "FROM sales " +
-                                                   "WHERE YEAR(saleDate) = ? " +
-                                                   "GROUP BY MONTH(saleDate);");
+                    "FROM sales " +
+                    "WHERE YEAR(saleDate) = ? " +
+                    "GROUP BY MONTH(saleDate);");
             statement.setInt(1, year);
 
             resultSet = statement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 profitSeries.getData().add(new XYChart.Data(resultSet.getString(1), resultSet.getDouble(2)));
             }
 
 
             statement = conn.prepareStatement("SELECT itemId, brand, modelNo, COUNT(itemId) " +
-                             "FROM sales INNER JOIN television ON sales.itemId = television.tvId " +
-                             "GROUP BY itemId " +
-                             "ORDER BY 4 DESC " +
-                             "LIMIT 5; ");
-
+                    "FROM sales INNER JOIN television ON sales.itemId = television.tvId " +
+                    "GROUP BY itemId " +
+                    "ORDER BY 4 DESC " +
+                    "LIMIT 5; ");
 
 
             resultSet = statement.executeQuery();
             StringBuilder sb = new StringBuilder();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 sb.append(resultSet.getString(2) + "/" +
                         resultSet.getString(3) + "(" +
                         resultSet.getInt(1) + ") sold " +
@@ -104,14 +103,13 @@ public class ReportViewController implements Initializable{
 
             statement = conn.prepareStatement("SELECT itemId, brand, modelNo, MAX(salePrice - sales.storePrice) " +
                     "FROM sales INNER JOIN television ON sales.itemId = television.tvId " +
-                            "GROUP BY itemId " +
-                            "ORDER BY 4 DESC " +
-                            "LIMIT 5;");
-
+                    "GROUP BY itemId " +
+                    "ORDER BY 4 DESC " +
+                    "LIMIT 5;");
 
 
             resultSet = statement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 sb.append(resultSet.getString(2) + "/" +
                         resultSet.getString(3) + "(" +
                         resultSet.getInt(1) + ") - " +
@@ -120,11 +118,9 @@ public class ReportViewController implements Initializable{
             }
             mostRevenueLabel.setText(sb.toString());
 
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println(e);
-        }
-        finally {
+        } finally {
             if (conn != null)
                 conn.close();
             if (statement != null)

@@ -8,10 +8,10 @@ public interface ControllerInterface {
 
     /**
      * Forces all implementing classes to load the data, passed on from the previous view.
-     * @param itemList
      */
 
     void preloadData(User employee);
+
     void preloadData(SmartTV smartTV);
 
 }

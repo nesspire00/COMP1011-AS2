@@ -17,7 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class RegisterUserViewController implements Initializable, ControllerInterface{
+public class RegisterUserViewController implements Initializable, ControllerInterface {
 
     @FXML private TextField userNameTextField;
     @FXML private TextField contactInfoTextField;
@@ -30,79 +30,87 @@ public class RegisterUserViewController implements Initializable, ControllerInte
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!SceneChanger.getLoggedInUser().isAdmin())
-            isManagerCheckBox.setVisible(false);
+        if (!SceneChanger.getLoggedInUser().isAdmin()) ;
+        isManagerCheckBox.setVisible(false);
     }
 
-    public void registerUserButtonClicked(ActionEvent event) throws SQLException, NoSuchAlgorithmException {
+    /**
+     * Try to validate inputs and save the new user into the DB with a hashed password and the salt
+     *
+     * @param event
+     * @throws SQLException
+     * @throws NoSuchAlgorithmException
+     */
+    public void registerUserButtonClicked(ActionEvent event) throws SQLException, NoSuchAlgorithmException, IOException {
 
-                Connection conn = null;
-                PreparedStatement statement = null;
+        Connection conn = null;
+        PreparedStatement statement = null;
 
 
-                try{
-                    conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/COMP1011-AS2?useSSL=false", "root", "root");
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://sql.computerstudi.es/gc200348171?useSSL=false", "gc200348171", "YaTa2qzm");
 
-                    byte[] salt = PasswordGenerator.getSalt();
+            byte[] salt = PasswordGenerator.getSalt();
 
-                    if(user == null){
-                        if(passwordField.getText().length() > 8){
-                            if(passwordField.getText().equals(confirmPasswordField.getText())) {
-                                statement = conn.prepareStatement("INSERT INTO users (userName, contactInfo, isManager, password, salt) VALUES (?,?,?,?,?)");
-                                statement.setString(1, userNameTextField.getText());
-                                statement.setString(2, contactInfoTextField.getText());
-                                statement.setBoolean(3, isManagerCheckBox.isSelected());
-                                statement.setString(4, Models.PasswordGenerator.getSHA512Password(passwordField.getText(), salt));
-                                statement.setBlob(5, new javax.sql.rowset.serial.SerialBlob(salt));
-                            }else{
-                                System.out.println("Passwords do not match");
-                            }
-                        } else{
-                            System.out.println("Password is too short");
-                        }
-                    }
-
-                    else if(user != null && !passwordField.getText().isEmpty() && !confirmPasswordField.getText().isEmpty()) {
-                        if(passwordField.getText().length() > 8) {
-                            if (passwordField.getText().equals(confirmPasswordField.getText())) {
-                                statement = conn.prepareStatement("UPDATE users SET userName = ?, contactInfo = ?, isManager = ?, password = ?, salt = ? WHERE userId = " + user.getUserId());
-                                statement.setString(1, userNameTextField.getText());
-                                statement.setString(2, contactInfoTextField.getText());
-                                statement.setBoolean(3, isManagerCheckBox.isSelected());
-                                statement.setString(4, Models.PasswordGenerator.getSHA512Password(passwordField.getText(), salt));
-                                statement.setBlob(5, new javax.sql.rowset.serial.SerialBlob(salt));
-                            }else{
-                                System.out.println("Passwords do not match");
-                            }
-                        } else{
-                            System.out.println("Password is too short");
-                        }
-                    }
-
-                    else if(user != null){
-                        statement = conn.prepareStatement("UPDATE users SET userName = ?, contactInfo = ?, isManager = ? WHERE userId = " + user.getUserId());
+            if (user == null) {
+                if (passwordField.getText().length() > 8) {
+                    if (passwordField.getText().equals(confirmPasswordField.getText())) {
+                        statement = conn.prepareStatement("INSERT INTO users (userName, contactInfo, isManager, password, salt) VALUES (?,?,?,?,?)");
                         statement.setString(1, userNameTextField.getText());
                         statement.setString(2, contactInfoTextField.getText());
                         statement.setBoolean(3, isManagerCheckBox.isSelected());
+                        statement.setString(4, Models.PasswordGenerator.getSHA512Password(passwordField.getText(), salt));
+                        statement.setBlob(5, new javax.sql.rowset.serial.SerialBlob(salt));
+                    } else {
+                        System.out.println("Passwords do not match");
                     }
-
-                    statement.execute();
-                    System.out.println("User Saved!");
+                } else {
+                    System.out.println("Password is too short");
                 }
-                catch (SQLException e){
-                    System.err.println(e);
+            } else if (user != null && !passwordField.getText().isEmpty() && !confirmPasswordField.getText().isEmpty()) {
+                if (passwordField.getText().length() > 8) {
+                    if (passwordField.getText().equals(confirmPasswordField.getText())) {
+                        statement = conn.prepareStatement("UPDATE users SET userName = ?, contactInfo = ?, isManager = ?, password = ?, salt = ? WHERE userId = " + user.getUserId());
+                        statement.setString(1, userNameTextField.getText());
+                        statement.setString(2, contactInfoTextField.getText());
+                        statement.setBoolean(3, isManagerCheckBox.isSelected());
+                        statement.setString(4, Models.PasswordGenerator.getSHA512Password(passwordField.getText(), salt));
+                        statement.setBlob(5, new javax.sql.rowset.serial.SerialBlob(salt));
+                    } else {
+                        System.out.println("Passwords do not match");
+                    }
+                } else {
+                    System.out.println("Password is too short");
                 }
-                finally {
-                    if (conn != null)
-                        conn.close();
-                    if (statement != null)
-                        statement.close();
-                }
+            } else if (user != null) {
+                statement = conn.prepareStatement("UPDATE users SET userName = ?, contactInfo = ?, isManager = ? WHERE userId = " + user.getUserId());
+                statement.setString(1, userNameTextField.getText());
+                statement.setString(2, contactInfoTextField.getText());
+                statement.setBoolean(3, isManagerCheckBox.isSelected());
             }
 
+            statement.execute();
+            System.out.println("User Saved!");
+            SceneChanger sc = new SceneChanger();
+            sc.changeScene(event, "../Views/ShowUsersView.fxml", "Employees");
+        } catch (SQLException e) {
+            System.err.println(e);
+        } finally {
+            if (conn != null)
+                conn.close();
+            if (statement != null)
+                statement.close();
+        }
+    }
 
+    /**
+     * Returns user back to appropriate page, whether they are a manager or not
+     *
+     * @param event
+     * @throws IOException
+     */
     public void cancelButtonPushed(ActionEvent event) throws IOException {
-        if(user != null && !SceneChanger.getLoggedInUser().isAdmin()) {
+        if (user != null && !SceneChanger.getLoggedInUser().isAdmin()) {
             SceneChanger sc = new SceneChanger();
             sc.changeScene(event, "../Views/ShowProductsView.fxml", "Inventory");
         } else {
@@ -111,6 +119,11 @@ public class RegisterUserViewController implements Initializable, ControllerInte
         }
     }
 
+    /**
+     * If an employee object gets passed in, the user is updated, so this method sets up labels and buttons accordingly
+     *
+     * @param employee
+     */
     @Override
     public void preloadData(User employee) {
         user = employee;

@@ -2,11 +2,6 @@ package Models;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
-import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -14,9 +9,11 @@ import java.sql.SQLException;
 
 public class SmartTV extends Television {
     private String operatingSystem, smartFeatures;
+    private boolean imageSet = false;
 
     /**
      * A constructor for SmartTV object, with inherited properties from super class and 2 of its own
+     *
      * @param storePrice
      * @param screenSize
      * @param modelNo
@@ -40,6 +37,7 @@ public class SmartTV extends Television {
 
     /**
      * Constructor for SmartTV object with an image.
+     *
      * @param storePrice
      * @param screenSize
      * @param modelNo
@@ -63,13 +61,13 @@ public class SmartTV extends Television {
 
     /**
      * Checks that the OS is not empty.s
+     *
      * @param operatingSystem
      */
     public void setOperatingSystem(String operatingSystem) {
-        if(!operatingSystem.equals("")){
+        if (!operatingSystem.equals("")) {
             this.operatingSystem = operatingSystem;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("Operating system cannot be empty");
         }
     }
@@ -82,36 +80,47 @@ public class SmartTV extends Television {
         this.smartFeatures = smartFeatures;
     }
 
+    /**
+     * Inserts the TV information into the DB
+     *
+     * @throws SQLException
+     */
     public void insertIntoDb() throws SQLException {
 
-            Connection conn = null;
-            PreparedStatement statement = null;
+        Connection conn = null;
+        PreparedStatement statement = null;
 
-            try{
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/COMP1011-AS2?useSSL=false", "root", "root");
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://sql.computerstudi.es/gc200348171?useSSL=false", "gc200348171", "YaTa2qzm");
 
+            if (imageSet) {
                 statement = conn.prepareStatement("INSERT INTO television (storePrice, screenSize, modelNo, resolution, brand, panelType, operatingSystem, smartFeatures, image) VALUES (?,?,?,?,?,?,?,?,?)");
-                statement.setDouble(1, getStorePrice());
-                statement.setInt(2, getScreenSize());
-                statement.setString(3, getModelNo());
-                statement.setString(4, getResolution());
-                statement.setString(5, getBrand());
-                statement.setString(6, getPanelType().toString());
-                statement.setString(7, operatingSystem);
-                statement.setString(8, smartFeatures);
                 statement.setString(9, getTvImageFile().getName());
+            } else {
+                statement = conn.prepareStatement("INSERT INTO television (storePrice, screenSize, modelNo, resolution, brand, panelType, operatingSystem, smartFeatures) VALUES (?,?,?,?,?,?,?,?)");
+            }
 
-                statement.execute();
-            }
-            catch (SQLException e){
-                System.err.println(e);
-            }
-            finally {
-                if (conn != null)
-                    conn.close();
-                if (statement != null)
-                    statement.close();
-            }
+            statement.setDouble(1, getStorePrice());
+            statement.setInt(2, getScreenSize());
+            statement.setString(3, getModelNo());
+            statement.setString(4, getResolution());
+            statement.setString(5, getBrand());
+            statement.setString(6, getPanelType().toString());
+            statement.setString(7, operatingSystem);
+            statement.setString(8, smartFeatures);
+
+            statement.execute();
+        } catch (SQLException e) {
+            System.err.println(e);
+        } finally {
+            if (conn != null)
+                conn.close();
+            if (statement != null)
+                statement.close();
         }
-
     }
+
+    public void setImageSet(boolean imageSet) {
+        this.imageSet = imageSet;
+    }
+}

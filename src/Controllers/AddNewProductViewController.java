@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -26,6 +27,7 @@ public class AddNewProductViewController implements Initializable {
 
     private FileChooser fileChooser;
     private File imageFile;
+    private boolean imageChanged = false;
 
     @FXML private TextField priceField;
     @FXML private TextField screenSizeField;
@@ -40,6 +42,7 @@ public class AddNewProductViewController implements Initializable {
 
     /**
      * Sets up the combobox and ImageView on view load.
+     *
      * @param location
      * @param resources
      */
@@ -55,6 +58,7 @@ public class AddNewProductViewController implements Initializable {
      * Handles the "Create" button push.
      * Attempts to create a new SmartTV object. If successful, add it to the list of products,
      * sends it back and changes scene.
+     *
      * @param event
      * @throws IOException
      */
@@ -69,13 +73,18 @@ public class AddNewProductViewController implements Initializable {
         String smartFeatures = smartFeaturesField.getText();
 
         try {
-            SmartTV testTv = new SmartTV(storePrice, screenSize, model, resolution, brand, panel, os, smartFeatures, imageFile);
-            testTv.insertIntoDb();
+            if (imageChanged) {
+                SmartTV testTv = new SmartTV(storePrice, screenSize, model, resolution, brand, panel, os, smartFeatures, imageFile);
+                testTv.setImageSet(true);
+                testTv.insertIntoDb();
+            } else {
+                SmartTV testTv = new SmartTV(storePrice, screenSize, model, resolution, brand, panel, os, smartFeatures);
+                testTv.insertIntoDb();
+            }
 
             SceneChanger sc = new SceneChanger();
             sc.changeScene(event, "../Views/ShowProductsView.fxml", "Inventory");
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             errorLabel.setText(e.getMessage());
         }
     }
@@ -83,6 +92,7 @@ public class AddNewProductViewController implements Initializable {
     /**
      * Handles the cancel button clicked.
      * Passes the unchanged list of products back, and changes scene.
+     *
      * @param event
      * @throws IOException
      */
@@ -92,21 +102,13 @@ public class AddNewProductViewController implements Initializable {
     }
 
     /**
-     * Mandatory method. Loads data passed from the previous view.
-     * @param itemList
-     */
-//    @Override
-//    public void preloadData(ObservableList<SmartTV> itemList) {
-//        currentTVList = itemList;
-//    }
-
-    /**
      * Handles the "Browse" button click.
      * Opens the system file chooser and lets the user pick the image for their product.
+     *
      * @param event
      */
-    public void chooseImageButtonPushed(ActionEvent event){
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    public void chooseImageButtonPushed(ActionEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");
 
@@ -114,10 +116,10 @@ public class AddNewProductViewController implements Initializable {
         FileChooser.ExtensionFilter jpgFilter = new FileChooser.ExtensionFilter("*.JPG File", "*.jpg");
         fileChooser.getExtensionFilters().addAll(pngFilter, jpgFilter);
 
-        String userDirectoryString = System.getProperty("user.home")+ "//Pictures";
+        String userDirectoryString = System.getProperty("user.home") + "//Pictures";
         File userDirectory = new File(userDirectoryString);
 
-        if(!userDirectory.canRead()){
+        if (!userDirectory.canRead()) {
             userDirectory = new File(System.getProperty("user.home"));
         }
 
@@ -125,12 +127,13 @@ public class AddNewProductViewController implements Initializable {
 
         imageFile = fileChooser.showOpenDialog(stage);
 
-        if(imageFile.isFile()){
-            try{
+        if (imageFile.isFile()) {
+            try {
                 BufferedImage bufferedImage = ImageIO.read(imageFile);
                 Image image = SwingFXUtils.toFXImage(bufferedImage, null);
                 this.imageView.setImage(image);
-            } catch (IOException e){
+                imageChanged = true;
+            } catch (IOException e) {
                 System.err.println(e);
             }
         }

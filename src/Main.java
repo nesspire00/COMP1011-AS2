@@ -11,7 +11,13 @@ public class Main extends Application{
     }
 
     /**
-     * Launch the view
+     * Launch the login view
+     *
+     * DEFAULT ADMIN USER:
+     * userId:      1
+     * password:    password123
+     * (You can create your own non-admin users later)
+     *
      * @param primaryStage
      * @throws Exception
      */

@@ -15,7 +15,7 @@ public abstract class Television {
     private panelType panelType;
     private File tvImageFile;
 
-    public enum panelType{
+    public enum panelType {
         CRT, OLED, PLASMA, LCD, LED, AMOLED;
     }
 
@@ -29,6 +29,7 @@ public abstract class Television {
 
     /**
      * Default constructor for Television object without an image.
+     *
      * @param storePrice
      * @param screenSize
      * @param modelNo
@@ -57,6 +58,7 @@ public abstract class Television {
 
     /**
      * Alternative constructor for Television object that can store an image.
+     *
      * @param storePrice
      * @param screenSize
      * @param modelNo
@@ -82,13 +84,13 @@ public abstract class Television {
 
     /**
      * Checks that the price is not negative or 0
+     *
      * @param storePrice
      */
     public void setStorePrice(double storePrice) {
-        if(storePrice > 0){
+        if (storePrice > 0) {
             this.storePrice = storePrice;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("The store price cannot be negative or 0");
         }
 
@@ -100,13 +102,13 @@ public abstract class Television {
 
     /**
      * Checks if entered screen size is in range of 15-80"
+     *
      * @param screenSize
      */
     public void setScreenSize(int screenSize) {
-        if(screenSize >= 15 && screenSize <= 80){
+        if (screenSize >= 15 && screenSize <= 80) {
             this.screenSize = screenSize;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("The screen size has to be in rage of 15 - 80");
         }
     }
@@ -117,13 +119,13 @@ public abstract class Television {
 
     /**
      * Checks that the modelNumber is not empty
+     *
      * @param modelNo
      */
     public void setModelNo(String modelNo) {
-        if(!modelNo.equals("")){
+        if (!modelNo.equals("")) {
             this.modelNo = modelNo;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("The model number cannot be empty");
         }
     }
@@ -134,13 +136,13 @@ public abstract class Television {
 
     /**
      * Checks that the resolution is not empty.
+     *
      * @param resolution
      */
     public void setResolution(String resolution) {
-        if(!resolution.equals("")){
+        if (!resolution.equals("")) {
             this.resolution = resolution;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("The resolution cannot be empty");
         }
     }
@@ -151,13 +153,13 @@ public abstract class Television {
 
     /**
      * Checks that the brand is not empty.
+     *
      * @param brand
      */
     public void setBrand(String brand) {
-        if(!brand.equals("")){
+        if (!brand.equals("")) {
             this.brand = brand;
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("The brand cannot be empty");
         }
     }
@@ -182,14 +184,13 @@ public abstract class Television {
      * This method will copy the file specified to the images directory on this server and give it
      * a unique name
      */
-    public void copyImageFile() throws IOException
-    {
+    public void copyImageFile() throws IOException {
         //create a new Path to copy the image into a local directory
         Path sourcePath = tvImageFile.toPath();
 
         String uniqueFileName = getUniqueFileName(tvImageFile.getName());
 
-        Path targetPath = Paths.get("./src/img/"+uniqueFileName);
+        Path targetPath = Paths.get("./src/img/" + uniqueFileName);
 
         //copy the file to the new directory
         Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
@@ -203,27 +204,23 @@ public abstract class Television {
      * This method will receive a String that represents a file name and return a
      * String with a random, unique set of letters prefixed to it
      */
-    private String getUniqueFileName(String oldFileName)
-    {
+    private String getUniqueFileName(String oldFileName) {
         String newName;
 
         //create a Random Number Generator
         SecureRandom rng = new SecureRandom();
 
         //loop until we have a unique file name
-        do
-        {
+        do {
             newName = "";
 
             //generate 32 random characters
-            for (int count=1; count <=32; count++)
-            {
+            for (int count = 1; count <= 32; count++) {
                 int nextChar;
 
-                do
-                {
+                do {
                     nextChar = rng.nextInt(123);
-                } while(!validCharacterValue(nextChar));
+                } while (!validCharacterValue(nextChar));
 
                 newName = String.format("%s%c", newName, nextChar);
             }
@@ -239,14 +236,12 @@ public abstract class Television {
      * This method will search the images directory and ensure that the file name
      * is unique
      */
-    public boolean uniqueFileInDirectory(String fileName)
-    {
+    public boolean uniqueFileInDirectory(String fileName) {
         File directory = new File("./src/img/");
 
         File[] dir_contents = directory.listFiles();
 
-        for (File file : dir_contents)
-        {
+        for (File file : dir_contents) {
             if (file.getName().equals(fileName))
                 return false;
         }
@@ -257,8 +252,7 @@ public abstract class Television {
      * This method will validate if the integer given corresponds to a valid
      * ASCII character that could be used in a file name
      */
-    public boolean validCharacterValue(int asciiValue)
-    {
+    public boolean validCharacterValue(int asciiValue) {
 
         //0-9 = ASCII range 48 to 57
         if (asciiValue >= 48 && asciiValue <= 57)

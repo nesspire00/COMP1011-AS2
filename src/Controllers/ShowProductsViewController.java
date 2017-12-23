@@ -38,6 +38,7 @@ public class ShowProductsViewController implements Initializable {
 
     /**
      * Sets up the TableView columns and default items on view load.
+     *
      * @param location
      * @param resources
      */
@@ -64,7 +65,7 @@ public class ShowProductsViewController implements Initializable {
 
 
         // Show user-dependent buttons
-        if(!SceneChanger.getLoggedInUser().isAdmin()){
+        if (!SceneChanger.getLoggedInUser().isAdmin()) {
             reportsButton.setVisible(false);
             employeesButton.setText("Edit profile");
         }
@@ -74,14 +75,16 @@ public class ShowProductsViewController implements Initializable {
 
     /**
      * Returns the count of stock items.
+     *
      * @return number of items in stock
      */
-    private int getStockNumber(){
+    private int getStockNumber() {
         return productsTable.getItems().size();
     }
 
     /**
-     * Changes scene to the add new product scene and passes current list of products for further editing.
+     * Changes scene to the add new product scene.
+     *
      * @param event
      * @throws IOException
      */
@@ -93,20 +96,22 @@ public class ShowProductsViewController implements Initializable {
 
     /**
      * Gets the total cost of all stock.
+     *
      * @return monetary value of stock.
      */
-    private double getStockPrice(){
+    private double getStockPrice() {
         double price = 0;
         ObservableList<SmartTV> stock = productsTable.getItems();
 
-        for(Television item : stock){
+        for (Television item : stock) {
             price += item.getStorePrice();
         }
         return price;
     }
 
     /**
-     * Sets up default products for demonstration.
+     * Get product info from the DB
+     *
      * @return
      */
     public ObservableList<SmartTV> getTVs() throws SQLException {
@@ -116,29 +121,27 @@ public class ShowProductsViewController implements Initializable {
         Statement statement = null;
         ResultSet resultSet = null;
 
-        try{
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/COMP1011-AS2?useSSL=false", "root", "root");
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://sql.computerstudi.es/gc200348171?useSSL=false", "gc200348171", "YaTa2qzm");
 
             statement = conn.createStatement();
             resultSet = statement.executeQuery("SELECT * FROM television");
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 SmartTV tv = new SmartTV(resultSet.getDouble(2),
-                                        resultSet.getInt(3),
-                                        resultSet.getString(5),
-                                        resultSet.getString(6),
-                                        resultSet.getString(8),
-                                        Television.panelType.valueOf(resultSet.getString(7)),
-                                        resultSet.getString(9),
-                                        resultSet.getString(10),
-                                        resultSet.getInt(1));
+                        resultSet.getInt(3),
+                        resultSet.getString(4),
+                        resultSet.getString(5),
+                        resultSet.getString(6),
+                        Television.panelType.valueOf(resultSet.getString(7)),
+                        resultSet.getString(8),
+                        resultSet.getString(9),
+                        resultSet.getInt(1));
                 tvs.add(tv);
             }
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println(e);
-        }
-        finally {
+        } finally {
             if (conn != null)
                 conn.close();
             if (statement != null)
@@ -150,15 +153,27 @@ public class ShowProductsViewController implements Initializable {
         return tvs;
     }
 
+    /**
+     * Destroys the logged in user object and goes back to log in scene
+     *
+     * @param event
+     * @throws IOException
+     */
     public void logOutButtonPushed(ActionEvent event) throws IOException {
         SceneChanger.setLoggedInUser(null);
         SceneChanger sc = new SceneChanger();
         sc.changeScene(event, "../Views/LoginBoxView.fxml", "Log in");
     }
 
+    /**
+     * Shows the all employee scene to an admin user
+     *
+     * @param event
+     * @throws IOException
+     */
     public void employeesButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
-        if(SceneChanger.getLoggedInUser().isAdmin()) {
+        if (SceneChanger.getLoggedInUser().isAdmin()) {
             sc.changeScene(event, "../Views/ShowUsersView.fxml", "Employees");
         } else {
             RegisterUserViewController controller = new RegisterUserViewController();
@@ -166,13 +181,29 @@ public class ShowProductsViewController implements Initializable {
         }
     }
 
+    /**
+     * Gets the selected item and shows the sales scene
+     *
+     * @param event
+     * @throws IOException
+     */
     public void sellItemButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
         SaleViewController controller = new SaleViewController();
-        sc.changeScene(event, "../Views/SaleView.fxml", "Sell item", productsTable.getSelectionModel().getSelectedItem(), controller);
+        try {
+            sc.changeScene(event, "../Views/SaleView.fxml", "Sell item", productsTable.getSelectionModel().getSelectedItem(), controller);
+        } catch (NullPointerException e) {
+            greetingLabel.setText("Pick an item to sell!");
+        }
     }
 
-    public void reportButtonPushed(ActionEvent event) throws IOException{
+    /**
+     * Show the sales report scene to an admin user
+     *
+     * @param event
+     * @throws IOException
+     */
+    public void reportButtonPushed(ActionEvent event) throws IOException {
         SceneChanger sc = new SceneChanger();
         sc.changeScene(event, "../Views/ReportView.fxml", "Report");
     }
